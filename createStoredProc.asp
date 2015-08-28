@@ -13,17 +13,17 @@
     END WITH
   SET ProcessSP = Nothing
   
-    if not ProcessRS.EOF then 'This is say, if there is Data than show
+    if not ProcessRS.EOF then 'If there is data in the Recordset 
 %>
 
 <%
-    DO WHILE NOT ProcessRS.EOF 'This is the LOOP
+      DO WHILE NOT ProcessRS.EOF 'This is the LOOP
 %>
   
 
 <%
-    ProcessRS.MoveNext() 'VERY IMPORTANT, tells the loop to go to the next record
-    LOOP
+      ProcessRS.MoveNext() 'VERY IMPORTANT, tells the loop to go to the next record
+      LOOP
 %>
 
 <%
